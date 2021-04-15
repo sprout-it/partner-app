@@ -25,12 +25,14 @@ class LocationService extends HookWidget {
             if (locationData != null) {
               lat.value = locationData.latitude;
               lng.value = locationData.longitude;
+              print('${lat.value}${lng.value}');
             }
           });
         }
       });
+
       return;
-    }, const []);
+    }, [lat.value, lng.value]);
 
     return SafeArea(
         child: Scaffold(
@@ -40,37 +42,4 @@ class LocationService extends HookWidget {
       body: Text('lat: ${lat.value} lng: ${lng.value}'),
     ));
   }
-  // UserLocation _currentLocation;
-  // var location = Location();
-
-  // LocationService() {
-  //   // Request permission to use location
-  //   location.requestPermission().then((granted) {
-  //     if (granted != null) {
-  //       // If granted listen to the onLocationChanged stream and emit over our controller
-  //       location.onLocationChanged.listen((locationData) {
-  //         if (locationData != null) {
-  //           _locationController.add(UserLocation(
-  //             latitude: locationData.latitude,
-  //             longitude: locationData.longitude,
-  //           ));
-  //         }
-  //       });
-  //     }
-  //   });
-
-  // }
-
-  // Future<UserLocation> getLocation() async {
-  //   try {
-  //     var userLocation = await location.getLocation();
-  //     _currentLocation = UserLocation(
-  //       latitude: userLocation.latitude,
-  //       longitude: userLocation.longitude,
-  //     );
-  //   } on Exception catch (e) {
-  //     print('Could not get location: ${e.toString()}');
-  //   }
-  //   return _currentLocation;
-  // }
 }
