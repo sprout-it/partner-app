@@ -32,6 +32,9 @@ dependencies:
   flutter_hooks: ^0.15.0
   google_maps_flutter: ^1.2.0
   cupertino_icons: ^1.0.2
+  flutter_sidebar: ^0.3.1
+  sliding_up_panel: ^1.0.2
+  flutter_svg: ^0.19.3
 
 dev_dependencies:
   flutter_test:
@@ -42,6 +45,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  assets:
+    - assets/images/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
