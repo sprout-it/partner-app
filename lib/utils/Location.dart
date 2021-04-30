@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
@@ -15,7 +14,6 @@ class LocationService extends HookWidget {
     final lat = useState(0.0);
     final lng = useState(0.0);
     var location = Location();
-    UserLocation userLocation = UserLocation();
 
     useEffect(() {
       location.enableBackgroundMode(enable: true);
